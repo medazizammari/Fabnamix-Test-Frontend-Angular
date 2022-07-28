@@ -1,0 +1,7 @@
+<div class="flex flex-col">
+  <input placeholder="First Name" class="p-2 border rounded m-1" [formControl]="firstName">
+  <input placeholder="Last Name" class="p-2 border rounded m-1" [formControl]="lastname">
+  <textarea placeholder="Address" class="p-2 border rounded m-1" [formControl]="address"></textarea>
+  <input placeholder="Date of Birth" type="date" class="p-2 border rounded m-1" [formControl]="dateOfBirth">
+  <button class="m-1 p-2 bg-green-600 hover:bg-green-700 rounded text-white" (click)="onFormSubmit()">Create</button>
+</div>

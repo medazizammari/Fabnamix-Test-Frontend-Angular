@@ -1,0 +1,18 @@
+<div *ngFor="let person of (personList$ | async)" class="bg-gray-700 even:bg-gray-800 text-white p-2 flex justify-between items-center">
+  <span>
+    {{ person.firstname }} {{ person.lastname }}
+  </span>
+  <div>
+    <button class="bg-red-500 hover:bg-red-600 rounded px-2 py-1 mx-1" (click)="deletePerson(person.id)">
+      Delete
+    </button>
+    <button class="bg-gray-500 hover:bg-gray-600 rounded px-2 py-1" routerLink="../{{person.id}}">
+      View Details
+    </button>
+  </div>
+</div>
+<hr>
+<div class="p-2">
+  <div class="text-2xl font-bold">Add a Person</div>
+  <app-person-form></app-person-form>
+</div>
